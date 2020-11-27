@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PulsaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Jumlah Saldo"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="end"
+            android:text="Rp."
+            android:textColor="@android:color/black"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_jmlSaldo"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/tv_jmlSaldo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:text="1000000" />
+
+        <EditText
+            android:id="@+id/et_noHp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Masukkan Nomor HP"
+            android:inputType="number"
+            android:padding="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageButton
+            android:id="@+id/btnContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_contact"
+            app:layout_constraintBottom_toBottomOf="@+id/et_noHp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_noHp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Pilih Nominal :"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/et_noHp"
+            tools:layout_editor_absoluteX="56dp" />
+
+        <Button
+            android:id="@+id/btn5k"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp\n5.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toStartOf="@+id/btn10k"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/btn10k"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp\n10.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintBottom_toBottomOf="@+id/btn5k"
+            app:layout_constraintEnd_toStartOf="@+id/btn20k"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn5k"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btn20k"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp\n20.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn10k"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/btn25k"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp \n25.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toStartOf="@+id/btn50k"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn5k" />
+
+        <Button
+            android:id="@+id/btn50k"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp \n50.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toStartOf="@+id/btn100k"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn25k"
+            app:layout_constraintTop_toBottomOf="@+id/btn10k" />
+
+        <Button
+            android:id="@+id/btn100k"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp \n100.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn50k"
+            app:layout_constraintTop_toBottomOf="@+id/btn20k" />
+
+        <Button
+            android:id="@+id/btn200k"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp \n200.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toStartOf="@+id/btn500k"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn25k" />
+
+        <Button
+            android:id="@+id/btn500k"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp \n500.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toStartOf="@+id/btn1jt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn200k"
+            app:layout_constraintTop_toBottomOf="@+id/btn50k" />
+
+        <Button
+            android:id="@+id/btn1jt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Rp \n1.000.000"
+            android:textSize="18sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn500k"
+            app:layout_constraintTop_toBottomOf="@+id/btn100k" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="16dp"
+            android:background="#9A000000"
+            app:layout_constraintBottom_toTopOf="@+id/et_pulsa_kon_pin"
+            app:layout_constraintTop_toBottomOf="@+id/btn500k"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <EditText
+            android:id="@+id/et_pulsa_kon_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:enabled="false"
+            android:hint="Konfirmasi Pin"
+            android:padding="16dp"
+            android:inputType="numberPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <Button
+            android:id="@+id/btn_pulsa_finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:padding="16dp"
+            android:text="Finish"
+            android:textSize="24sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pulsa_kon_pin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
